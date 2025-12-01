@@ -1,5 +1,0 @@
-{
-  "name": "Drilling Cost Planner (DCP)",
-  "description": "Frontend-based drilling engineering tool for estimating well time and costs, featuring scenario comparison, interactive optimization, and AI-powered risk analysis.",
-  "requestFramePermissions": []
-}
