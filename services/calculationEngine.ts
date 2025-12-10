@@ -138,15 +138,8 @@ const calculateCostsWithDetails = (
         }
     }
 
-    // Logic for TARIFA C (Fuel) - Applies to ALL Items
-    const fuelItem = getCatalogItem(catalog, 'EQUIPO', 'HS', { item: 'TARIFA C', equipmentType: params.equipmentType });
-    if (fuelItem) {
-        addCost(fuelItem, hours);
-    } else {
-        warnings.add(`Missing Cost Item: EQUIPO / ${params.equipmentType} / TARIFA C (Fuel)`);
-    }
-
-
+    // TARIFA C (Fuel) logic was removed as it's already included in the base hourly rates (A/B).
+    // This prevents double-counting the fuel cost on every activity.
     // Logic for Mobilization / DTM (Item 0 Only)
     if (line.id === '0' || line.type === LineType.MOVING) {
         if (params.isFirstWell) {
